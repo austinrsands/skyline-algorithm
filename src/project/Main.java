@@ -3,6 +3,7 @@ package project;
 import java.util.ArrayList;
 
 public class Main {
+    // Entry point
     public static void main(String[] args) {
         Building a = new Building(2, 10, 9);
         Building b = new Building(3, 15, 7);
