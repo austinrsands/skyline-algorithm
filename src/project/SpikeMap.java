@@ -121,19 +121,4 @@ public class SpikeMap {
     public String toString() {
         return spikes.toString().replace('[', '(').replace(']', ')');
     }
-
-    /**
-     * Gets the diagram representation of the spike map
-     * @return the diagram representation of the spike map
-     */
-    public String getDiagram() {
-        String diagram = "";
-        for (int i = 0; i < spikes.size(); i++) {
-            for (int j = 0; j < spikes.get(i); j++) {
-                diagram += "*";
-            }
-            diagram += "\n";
-        }
-        return diagram;
-    }
 }

@@ -136,4 +136,21 @@ public class Skyline {
     public String toString() {
         return skylineList.toString().replace('[', '(').replace(']', ')');
     }
+
+    /**
+     * Gets the diagram representation of the skyline
+     * @return the diagram representation of the skyline
+     */
+    public String getDiagram() {
+        String diagram = "";
+        for (int i = 0; i < skylineList.size() - 2; i += 2) {
+            for (int j = 0; j < skylineList.get(i + 2) - skylineList.get(i); j++) {
+                for (int k = 0; k < skylineList.get(i + 1); k++) {
+                    diagram += "*";
+                }
+                diagram += "\n";
+            }
+        }
+        return diagram;
+    }
 }
